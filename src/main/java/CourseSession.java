@@ -4,8 +4,7 @@ public class CourseSession {
 
     private String department;
     private String number;
-    private java.util.ArrayList<Student> students =
-        new java.util.ArrayList<Student>();
+    private ArrayList<Student> students = new ArrayList<Student>();
 
     public CourseSession(String department, String number) {
         this.department = department;
