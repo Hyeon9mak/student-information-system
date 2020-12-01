@@ -1,13 +1,11 @@
 public class StudentTest extends junit.framework.TestCase {
     public void testCreate(){
-        Student student = new Student("Hyeon Gu");
-        String studentName = student.getName();
-        assertEquals("Hyeon Gu", studentName);
+        final String firstStudentName = "Hyeon Gu";
+        Student student = new Student(firstStudentName);
+        assertEquals(firstStudentName, student.getName());
 
-        Student secondStudent = new Student("Dong Hyeon");
-        String secondStudentName = secondStudent.getName();
-        assertEquals("Dong Hyeon", secondStudentName);
-
-        assertEquals("Hyeon Gu", student.getName());
+        final String secondStudentName = "Dong Hyeon";
+        Student secondStudent = new Student(secondStudentName);
+        assertEquals(secondStudentName, secondStudent.getName());
     }
 }

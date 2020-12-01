@@ -1,12 +1,12 @@
 public class Student {
 
-    String myname;
+    private String name;
 
     Student(String name) {
-        myname = name;
+        this.name = name;
     }
 
     public String getName() {
-        return myname;
+        return name;
     }
 }
