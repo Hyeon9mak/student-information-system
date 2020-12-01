@@ -1,3 +1,5 @@
+package studentinfo;
+
 import junit.framework.TestSuite;
 
 public class AllTests {

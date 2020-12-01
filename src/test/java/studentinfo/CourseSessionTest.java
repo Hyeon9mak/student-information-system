@@ -1,3 +1,5 @@
+package studentinfo;
+
 import junit.framework.TestCase;
 import java.util.ArrayList;
 

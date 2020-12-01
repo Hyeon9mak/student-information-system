@@ -1,3 +1,5 @@
+package studentinfo;
+
 import java.util.ArrayList;
 
 public class CourseSession {
