@@ -1,4 +1,6 @@
-public class StudentTest extends junit.framework.TestCase {
+import junit.framework.TestCase;
+
+public class StudentTest extends TestCase {
     public void testCreate(){
         final String firstStudentName = "Hyeon Gu";
         Student student = new Student(firstStudentName);
