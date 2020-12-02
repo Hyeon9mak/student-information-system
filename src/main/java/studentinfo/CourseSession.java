@@ -45,7 +45,7 @@ public class CourseSession {
     public Date getEndDate() {
         GregorianCalendar calendar = new GregorianCalendar();
         calendar.setTime(startDate);
-        int numberOfDays = 16 * 7 - 3;
+        int numberOfDays = 16 * 7 - 3;  // weeks * days per week - 3 days
         calendar.add(Calendar.DAY_OF_YEAR, numberOfDays);
         return calendar.getTime();
     }
