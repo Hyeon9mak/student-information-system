@@ -38,16 +38,15 @@ public class CourseSession {
         return students.get(index);
     }
 
+    public Date getStartDate() {
+        return startDate;
+    }
+
     public Date getEndDate() {
         GregorianCalendar calendar = new GregorianCalendar();
         calendar.setTime(startDate);
         int numberOfDays = 16 * 7 - 3;
         calendar.add(Calendar.DAY_OF_YEAR, numberOfDays);
-        Date endDate = calendar.getTime();
-        return endDate;
-    }
-
-    public Date getStartDate() {
-        return startDate;
+        return calendar.getTime();
     }
 }
