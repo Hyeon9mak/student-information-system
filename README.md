@@ -2,7 +2,7 @@
 ![image](https://user-images.githubusercontent.com/37354145/100823294-4a870200-3497-11eb-9632-02d5ee738fdf.png)
 
 **지름길로 빠르게 배울 수 있는 자바 프로그래밍(Agile Java) 실습**  
-[branch를 chess로 변경하면 연습문제 진행 내역 확인 가능]()
+[branch를 chess로 변경하면 연습문제 진행 내역 확인 가능](https://github.com/Hyeon9mak/student-information-system/tree/chess)
 
 
 ## 블로그 포스트 링크
