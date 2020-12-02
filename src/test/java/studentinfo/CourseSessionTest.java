@@ -1,5 +1,6 @@
 package studentinfo;
 
+import java.util.Date;
 import junit.framework.TestCase;
 import java.util.ArrayList;
 
@@ -28,5 +29,20 @@ public class CourseSessionTest extends TestCase {
         assertEquals(2, session.getNumberOfStudents());
         assertEquals(student1, session.get(0));
         assertEquals(student2, session.get(1));
+    }
+
+    public void testCourseDates(){
+        int year = 103;
+        int month = 0;
+        int date = 6;
+        Date startDate = new Date(year, month, date);
+
+        CourseSession session = new CourseSession("ABCD", "2000", startDate);
+
+        year = 103;
+        month = 3;
+        date = 25;
+        Date sixteenWeeksOut = new Date(year, month, date);
+        assertEquals(sixteenWeeksOut, session.getEndDate());
     }
 }
