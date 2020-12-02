@@ -7,15 +7,21 @@ import java.util.ArrayList;
 public class CourseSessionTest extends TestCase {
 
     private CourseSession session;
+    private Date startDate;
 
     public void setUp() {
-        session = new CourseSession("ENGL", "101");
+        int year = 103;
+        int month = 0;
+        int date = 6;
+        startDate = new Date(year, month, date);
+        session = new CourseSession("ENGL", "101", startDate);
     }
 
     public void testCreate() {
         assertEquals("ENGL", session.getDepartment());
         assertEquals("101", session.getNumber());
         assertEquals(0, session.getNumberOfStudents());
+        assertEquals(startDate, session.getStartDate());
     }
 
     public void testEnrolStudents() {
@@ -33,15 +39,8 @@ public class CourseSessionTest extends TestCase {
 
     public void testCourseDates(){
         int year = 103;
-        int month = 0;
-        int date = 6;
-        Date startDate = new Date(year, month, date);
-
-        CourseSession session = new CourseSession("ABCD", "2000", startDate);
-
-        year = 103;
-        month = 3;
-        date = 25;
+        int month = 3;
+        int date = 25;
         Date sixteenWeeksOut = new Date(year, month, date);
         assertEquals(sixteenWeeksOut, session.getEndDate());
     }
