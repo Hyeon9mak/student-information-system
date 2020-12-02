@@ -5,9 +5,11 @@ public class PawnTest extends junit.framework.TestCase {
         final String secondPawnColor = "white";
 
         Pawn firstPawn = new Pawn(firstPawnColor);
-        Pawn secondPawn = new Pawn(secondPawnColor);
-
         assertEquals(firstPawn.getColor(), firstPawnColor);
+
+        Pawn secondPawn = new Pawn(secondPawnColor);
         assertEquals(secondPawn.getColor(), secondPawnColor);
+
+        Pawn thridPawn = new Pawn();
     }
 }
