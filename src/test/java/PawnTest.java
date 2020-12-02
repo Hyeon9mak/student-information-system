@@ -1,4 +1,6 @@
-public class PawnTest extends junit.framework.TestCase {
+import junit.framework.TestCase;
+
+public class PawnTest extends TestCase {
 
     public void testCreate() {
         Pawn firstPawn = new Pawn(firstPawnColor);
