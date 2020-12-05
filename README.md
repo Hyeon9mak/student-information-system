@@ -8,3 +8,4 @@
 ## 블로그 포스트 링크
 - [An Agile Overview](https://hyeon9mak.github.io/agile-java/Agile-Java-An-Agile-Overview/)
 - [Lesson01 시작하기](https://hyeon9mak.github.io/agile-java/Agile-Java-Lesson01/)
+- [Lesson02 자바의 기초](https://hyeon9mak.github.io/agile-java/Agile-Java-Lesson02/)
