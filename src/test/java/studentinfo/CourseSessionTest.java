@@ -4,7 +4,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import junit.framework.TestCase;
-import java.util.ArrayList;
 
 public class CourseSessionTest extends TestCase {
 
@@ -20,7 +19,7 @@ public class CourseSessionTest extends TestCase {
         GregorianCalendar calendar = new GregorianCalendar();
         calendar.clear();
         calendar.set(Calendar.YEAR, year);
-        calendar.set(Calendar.MONTH, month-1);
+        calendar.set(Calendar.MONTH, month - 1);
         calendar.set(Calendar.DAY_OF_MONTH, date);
         return calendar.getTime();
     }
@@ -45,8 +44,21 @@ public class CourseSessionTest extends TestCase {
         assertEquals(student2, session.get(1));
     }
 
-    public void testCourseDates(){
+    public void testCourseDates() {
         Date sixteenWeeksOut = createDate(2003, 4, 25);
         assertEquals(sixteenWeeksOut, session.getEndDate());
+    }
+
+    public void testRosterReport() {
+        session.enroll(new Student("A"));
+        session.enroll(new Student("B"));
+
+        String rosterReport = session.getRosterReport();
+        assertEquals(
+            CourseSession.ROSTER_REPORT_HEADER +
+                "A" + CourseSession.NEWLINE +
+                "B" + CourseSession.NEWLINE +
+                CourseSession.ROSTER_REPORT_FOOTER +
+                "2" + CourseSession.NEWLINE, rosterReport);
     }
 }
