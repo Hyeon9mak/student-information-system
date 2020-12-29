@@ -1,4 +1,4 @@
-package studentinfo;
+package sis.studentinfo;
 
 import java.util.ArrayList;
 import java.util.Calendar;

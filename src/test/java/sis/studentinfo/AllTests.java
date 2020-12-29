@@ -1,6 +1,7 @@
-package studentinfo;
+package sis.studentinfo;
 
 import junit.framework.TestSuite;
+import sis.report.RosterReporterTest;
 
 public class AllTests {
 

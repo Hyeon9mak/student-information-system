@@ -1,4 +1,4 @@
-package studentinfo;
+package sis.studentinfo;
 
 public class Student {
 
