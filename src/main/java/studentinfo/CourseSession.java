@@ -7,11 +7,6 @@ import java.util.GregorianCalendar;
 
 public class CourseSession {
 
-    static final String NEWLINE = System.getProperty("line.separator"); // 모든 시스템(OS)에 맞춰 개행
-    static final String ROSTER_REPORT_HEADER = "Student" + NEWLINE + "-" + NEWLINE;
-    static final String ROSTER_REPORT_FOOTER = NEWLINE + "# students = ";
-
-
     private final String department;
     private final String number;
     private final ArrayList<Student> students = new ArrayList<Student>();
