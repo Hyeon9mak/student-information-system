@@ -1,7 +1,5 @@
 package studentinfo;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
