@@ -13,9 +13,9 @@ public class DateUtilTest extends TestCase {
         Date date = DateUtil.createDate(2000, 1, 1);
         Calendar calendar = new GregorianCalendar();
         calendar.setTime(date);
-//        assertThat(calendar.get(Calendar.YEAR))
-//        assertThat(calendar.get(Calendar.YEAR))
-//        assertThat(calendar.get(Calendar.YEAR))
+        assertEquals(2000, calendar.get(Calendar.YEAR));
+        assertEquals(Calendar.JANUARY, calendar.get(Calendar.MONTH));
+        assertEquals(1, calendar.get(Calendar.DAY_OF_MONTH));
     }
 
 }
