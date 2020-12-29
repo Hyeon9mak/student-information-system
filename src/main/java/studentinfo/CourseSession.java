@@ -12,10 +12,10 @@ public class CourseSession {
     static final String ROSTER_REPORT_FOOTER = NEWLINE + "# students = ";
 
 
-    private String department;
-    private String number;
-    private ArrayList<Student> students = new ArrayList<Student>();
-    private Date startDate;
+    private final String department;
+    private final String number;
+    private final ArrayList<Student> students = new ArrayList<Student>();
+    private final Date startDate;
 
     public CourseSession(String department, String number, Date startDate) {
         this.department = department;
@@ -60,13 +60,10 @@ public class CourseSession {
 
         buffer.append(ROSTER_REPORT_HEADER);
 
-        Student student = students.get(0);
-        buffer.append(student.getName());
-        buffer.append(NEWLINE);
-
-        student = students.get(1);
-        buffer.append(student.getName());
-        buffer.append(NEWLINE);
+        for (Student student : students) {
+            buffer.append(student.getName());
+            buffer.append(NEWLINE);
+        }
 
         buffer.append(ROSTER_REPORT_FOOTER + students.size() + NEWLINE);
 
