@@ -14,11 +14,11 @@ public class StudentTest extends TestCase {
         assertEquals(secondStudentName, secondStudent.getName());
     }
 
-    public void testBadStatic() {
-        Student studentA = new Student("a");
-        assertEquals("a", studentA.getName());
-        Student studentB = new Student("b");
-        assertEquals("b", studentB.getName());
-        assertEquals("a", studentA.getName());
-    }
+//    public void testBadStatic() {
+//        Student studentA = new Student("a");
+//        assertEquals("a", studentA.getName());
+//        Student studentB = new Student("b");
+//        assertEquals("b", studentB.getName());
+//        assertEquals("a", studentA.getName());
+//    }
 }
