@@ -12,7 +12,7 @@ public class CourseSessionTest extends TestCase {
 
     public void setUp() {
         startDate = DateUtil.createDate(2003, 1, 6);
-        session = new CourseSession("ENGL", "101", startDate);
+        session = CourseSession.create("ENGL", "101", startDate);
     }
 
     public Date createDate(int year, int month, int date) {
