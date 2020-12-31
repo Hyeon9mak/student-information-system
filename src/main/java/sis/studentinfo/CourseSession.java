@@ -17,7 +17,11 @@ public class CourseSession {
         this.department = department;
         this.number = number;
         this.startDate = startDate;
-        CourseSession.count = CourseSession.count + 1;
+        CourseSession.incrementCount();
+    }
+
+    private static void incrementCount() {
+        count = count + 1;
     }
 
     public static void resetCount() {
