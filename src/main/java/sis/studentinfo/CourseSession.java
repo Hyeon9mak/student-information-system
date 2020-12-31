@@ -7,7 +7,7 @@ import java.util.GregorianCalendar;
 
 public class CourseSession {
 
-    static int count;
+    private static int count;
     private final String department;
     private final String number;
     private final ArrayList<Student> students = new ArrayList<Student>();
@@ -18,6 +18,14 @@ public class CourseSession {
         this.number = number;
         this.startDate = startDate;
         CourseSession.count = CourseSession.count + 1;
+    }
+
+    public static void resetCount() {
+        count = 0;
+    }
+
+    public static int getCount() {
+        return count;
     }
 
     public String getDepartment() {

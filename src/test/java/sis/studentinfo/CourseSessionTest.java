@@ -50,11 +50,11 @@ public class CourseSessionTest extends TestCase {
     }
 
     public void testCount() {
-        CourseSession.count = 0;
+        CourseSession.resetCount();
         createCourseSession();
-        assertEquals(1, CourseSession.count);
+        assertEquals(1, CourseSession.getCount());
         createCourseSession();
-        assertEquals(2, CourseSession.count);
+        assertEquals(2, CourseSession.getCount());
     }
 
     private CourseSession createCourseSession() {
