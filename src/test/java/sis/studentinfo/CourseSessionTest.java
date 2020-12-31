@@ -48,4 +48,16 @@ public class CourseSessionTest extends TestCase {
         Date sixteenWeeksOut = DateUtil.createDate(2003, 4, 25);
         assertEquals(sixteenWeeksOut, session.getEndDate());
     }
+
+    public void testCount() {
+        CourseSession.count = 0;
+        createCourseSession();
+        assertEquals(1, CourseSession.count);
+        createCourseSession();
+        assertEquals(2, CourseSession.count);
+    }
+
+    private CourseSession createCourseSession() {
+        return new CourseSession("ENGL", "101", startDate);
+    }
 }
