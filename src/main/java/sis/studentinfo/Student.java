@@ -2,7 +2,9 @@ package sis.studentinfo;
 
 public class Student {
 
-    private String name;
+    private static final int CREDITS_REQUIRED_FOR_FULL_TIME = 12;
+    
+    private final String name;
     private int credits;
 
     public Student(String name) {
@@ -15,7 +17,7 @@ public class Student {
     }
 
     public boolean isFullTime() {
-        return false;
+        return credits >= CREDITS_REQUIRED_FOR_FULL_TIME;
     }
 
     public int getCredits() {
