@@ -10,3 +10,4 @@
 - [Lesson01 시작하기](https://hyeon9mak.github.io/agile-java/Agile-Java-Lesson01/)
 - [Lesson02 자바의 기초](https://hyeon9mak.github.io/agile-java/Agile-Java-Lesson02/)
 - [Lesson03 문자열과 패키지](https://hyeon9mak.github.io/agile-java/Agile-Java-Lesson03/)
+- [Lesson04 클래스 메서드와 필드](https://hyeon9mak.github.io/agile-java/Agile-Java-Lesson04/)
