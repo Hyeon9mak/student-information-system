@@ -5,7 +5,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
-public class CourseSession {
+public class CourseSession implements Comparable<CourseSession> {
 
     private static int count;
     private final String department;
@@ -76,5 +76,9 @@ public class CourseSession {
 
     public void setNumberOfCredits(int numberOfCredits) {
         this.numberOfCredits = numberOfCredits;
+    }
+
+    public int compareTo(CourseSession that) {
+        return this.getDepartment().compareTo(that.getDepartment());
     }
 }
