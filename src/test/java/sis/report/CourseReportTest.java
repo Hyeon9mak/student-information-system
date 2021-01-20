@@ -18,6 +18,8 @@ public class CourseReportTest extends TestCase {
 
         assertEquals("ENGL 101" + NEWLINE + "CZEC 200" + NEWLINE + "ITAL 410" + NEWLINE,
             report.text());
+        assertEquals("CZEC 200" + NEWLINE + "ENGL 101" + NEWLINE + "ITAL 410" + NEWLINE,
+            report.text());
     }
 
     public void testSortStringsInPlace() {
