@@ -4,11 +4,13 @@ import java.util.ArrayList;
 
 public class Student {
 
+    enum Grade { A, B, C, D, F };
+
     static final int CREDITS_REQUIRED_FOR_FULL_TIME = 12;
     static final String IN_STATE = "CO";
 
     private final String name;
-    private final ArrayList<String> grades = new ArrayList<String>();
+    private final ArrayList<Grade> grades = new ArrayList<Grade>();
     private int credits;
     private String state = "";
 
@@ -41,7 +43,7 @@ public class Student {
         this.state = state;
     }
 
-    void addGrade(String grade) {
+    void addGrade(Grade grade) {
         grades.add(grade);
     }
 
@@ -50,18 +52,18 @@ public class Student {
             return 0.0;
         }
         double total = 0.0;
-        for (String grade : grades) {
+        for (Grade grade : grades) {
             total += gradePointsFor(grade);
         }
 
         return total / grades.size();
     }
 
-    private int gradePointsFor(String grade) {
-        if (grade.equals("A")) { return 4; }
-        if (grade.equals("B")) { return 3; }
-        if (grade.equals("C")) { return 2; }
-        if (grade.equals("D")) { return 1; }
+    private int gradePointsFor(Grade grade) {
+        if (grade.equals(Grade.A)) { return 4; }
+        if (grade.equals(Grade.B)) { return 3; }
+        if (grade.equals(Grade.C)) { return 2; }
+        if (grade.equals(Grade.D)) { return 1; }
         return 0;
     }
 }
