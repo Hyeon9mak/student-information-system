@@ -76,6 +76,18 @@ public class StudentTest extends TestCase {
         assertEquals(expectedGpa, student.getGpa(), GRADE_TOLERANCE);
     }
 
+    private Student createHonorsStudent(Student.Grade grade) {
+        Student student = createHonorsStudent();
+        student.addGrade(grade);
+        return student;
+    }
+
+    private Student createHonorsStudent() {
+        Student student = new Student("a");
+        student.setGradingStrategy(new HonorsGradingStrategy());
+        return student;
+    }
+
 //    public void testBadStatic() {
 //        Student studentA = new Student("a");
 //        assertEquals("a", studentA.getName());

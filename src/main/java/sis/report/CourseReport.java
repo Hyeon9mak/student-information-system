@@ -4,11 +4,12 @@ import static sis.report.ReportConstant.NEWLINE;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import sis.studentinfo.CourseSession;
 
 public class CourseReport {
 
-    private final ArrayList<CourseSession> sessions = new ArrayList<CourseSession>();
+    private final List<CourseSession> sessions = new ArrayList<CourseSession>();
 
     public void add(CourseSession session) {
         sessions.add(session);

@@ -4,13 +4,14 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.List;
 
 public class CourseSession implements Comparable<CourseSession> {
 
     private static int count;
     private final String department;
     private final String number;
-    private final ArrayList<Student> students = new ArrayList<Student>();
+    private final List<Student> students = new ArrayList<Student>();
     private final Date startDate;
     private int numberOfCredits;
 
@@ -70,7 +71,7 @@ public class CourseSession implements Comparable<CourseSession> {
         return calendar.getTime();
     }
 
-    public ArrayList<Student> getAllStudents() {
+    public List<Student> getAllStudents() {
         return students;
     }
 

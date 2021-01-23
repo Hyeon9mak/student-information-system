@@ -1,8 +1,15 @@
 package sis.studentinfo;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Student {
+
+    private GradingStrategy gradingStrategy = new RegularGradingStrategy();
+
+    public void setGradingStrategy(GradingStrategy gradingStrategy) {
+        this.gradingStrategy = gradingStrategy;
+    }
 
     enum Grade { A, B, C, D, F };
 
@@ -10,7 +17,7 @@ public class Student {
     static final String IN_STATE = "CO";
 
     private final String name;
-    private final ArrayList<Grade> grades = new ArrayList<Grade>();
+    private final List<Grade> grades = new ArrayList<Grade>();
     private int credits;
     private String state = "";
 
@@ -53,17 +60,9 @@ public class Student {
         }
         double total = 0.0;
         for (Grade grade : grades) {
-            total += gradePointsFor(grade);
+            total += gradingStrategy.getGradePointsFor(grade);
         }
 
         return total / grades.size();
-    }
-
-    private int gradePointsFor(Grade grade) {
-        if (grade.equals(Grade.A)) { return 4; }
-        if (grade.equals(Grade.B)) { return 3; }
-        if (grade.equals(Grade.C)) { return 2; }
-        if (grade.equals(Grade.D)) { return 1; }
-        return 0;
     }
 }
