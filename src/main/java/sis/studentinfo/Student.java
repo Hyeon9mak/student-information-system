@@ -53,18 +53,12 @@ public class Student {
         for (String grade : grades) {
             if (grade.equals("A")) {
                 total += 4;
-            } else {
-                if (grade.equals("B")) {
-                    total += 3;
-                } else {
-                    if (grade.equals("C")) {
-                        total += 2;
-                    } else {
-                        if (grade.equals("D")) {
-                            total += 1;
-                        }
-                    }
-                }
+            } else if (grade.equals("B")) {
+                total += 3;
+            } else if (grade.equals("C")) {
+                total += 2;
+            } else if (grade.equals("D")) {
+                total += 1;
             }
         }
 
